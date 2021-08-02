@@ -18,8 +18,8 @@ class CustomDrawer extends StatelessWidget {
                 children: [
                   DrawerHeader(
                     decoration: BoxDecoration(
-                      color: Colors.deepOrange,
-                    ),
+                    color: Colors.deepOrange,
+                  ),
                     child: Align(
                       alignment: Alignment.centerLeft,
                       child: Column(
@@ -38,9 +38,7 @@ class CustomDrawer extends StatelessWidget {
                         ],
                       ),
                     ),
-
                   ),
-
                 ],
               ),
               ListTile(

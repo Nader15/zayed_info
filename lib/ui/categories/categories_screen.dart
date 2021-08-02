@@ -10,7 +10,7 @@ class CategoriesScreen extends StatelessWidget {
         itemCount: imgList.length,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 1,
-          childAspectRatio: 2.5,
+          childAspectRatio: 2.8,
           // mainAxisSpacing: 10,
           // crossAxisSpacing: 1,
         ),
@@ -36,7 +36,7 @@ class CategoriesScreen extends StatelessWidget {
                           color: Colors.white, fontWeight: FontWeight.bold,fontSize: 20),
                     ),
                   ),
-                )
+                ),
               ],
             ),
           );

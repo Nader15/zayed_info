@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 import 'package:zayed_info/ui/categories/categories_screen.dart';
 import 'package:zayed_info/ui/home/home_screen.dart';
+import 'package:zayed_info/ui/profile/profile_screen.dart';
 
 class MainHome extends StatefulWidget {
   @override
@@ -16,7 +17,7 @@ class _MainHomeState extends State<MainHome> {
     HomeScreen(),
     CategoriesScreen(),
     Center(child: Text("Likes")),
-    Center(child: Text("Profile")),
+    ProfileScreen(),
   ];
 
   @override
