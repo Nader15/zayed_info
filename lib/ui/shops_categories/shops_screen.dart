@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:zayed_info/ui/home/slider.dart';
-import 'package:zayed_info/ui/products/product_screen.dart';
+import 'package:zayed_info/ui/shop/Shop_Screen/shop_screen.dart';
 
-class SubCategories extends StatefulWidget {
+class ShopsCategories extends StatefulWidget {
   @override
-  _SubCategoriesState createState() => _SubCategoriesState();
+  _ShopsCategoriesState createState() => _ShopsCategoriesState();
 }
 
-class _SubCategoriesState extends State<SubCategories> {
+class _ShopsCategoriesState extends State<ShopsCategories> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        leading: IconButton(icon: Icon(Icons.arrow_back,color: Colors.black,), onPressed: (){}),
+        leading: IconButton(icon: Icon(Icons.arrow_back,color: Colors.black,), onPressed: (){ Navigator.pop(context);}),
         backgroundColor: Colors.white,
         title: Text("Grill",style: TextStyle(color: Colors.black),),
         actions: [
@@ -28,7 +28,7 @@ class _SubCategoriesState extends State<SubCategories> {
           itemBuilder: (context, index) {
             return InkWell(
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>ProductScreen()));
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>ShopScreen()));
               },
               child: Card(
                 elevation: 5,

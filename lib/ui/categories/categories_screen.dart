@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:zayed_info/ui/home/slider.dart';
-import 'package:zayed_info/ui/sub_categories/subCategories.dart';
+import 'package:zayed_info/ui/shops_categories/shops_screen.dart';
 
 class CategoriesScreen extends StatelessWidget {
   @override
@@ -18,7 +18,7 @@ class CategoriesScreen extends StatelessWidget {
         itemBuilder: (context, index) {
           return InkWell(
             onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>SubCategories()));
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>ShopsCategories()));
             },
             child: Stack(
               children: [
