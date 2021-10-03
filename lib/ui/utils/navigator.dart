@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
 navigateAndKeepStack(BuildContext context, Widget targetRoute) =>
-
-
     Navigator.push(
       context,
       MaterialPageRoute(
@@ -11,17 +9,14 @@ navigateAndKeepStack(BuildContext context, Widget targetRoute) =>
       ),
     );
 
-
-
 navigateAndClearStack(BuildContext context, Widget targetRoute) =>
     Navigator.of(context).pushAndRemoveUntil(
       MaterialPageRoute(
         // CustomFadePageRoute(
         builder: (context) => targetRoute,
       ),
-          (Route<dynamic> route) => false,
+      (Route<dynamic> route) => false,
     );
-
 
 class CustomFadePageRoute<T> extends MaterialPageRoute<T> {
   CustomFadePageRoute({WidgetBuilder builder, RouteSettings settings})
@@ -36,6 +31,7 @@ class CustomFadePageRoute<T> extends MaterialPageRoute<T> {
     );
   }
 }
+
 class CustomScalePageRoute<T> extends MaterialPageRoute<T> {
   CustomScalePageRoute({WidgetBuilder builder, RouteSettings settings})
       : super(builder: builder, settings: settings);
@@ -49,7 +45,6 @@ class CustomScalePageRoute<T> extends MaterialPageRoute<T> {
     );
   }
 }
-
 
 class CustomSizePageRoute<T> extends MaterialPageRoute<T> {
   CustomSizePageRoute({WidgetBuilder builder, RouteSettings settings})
