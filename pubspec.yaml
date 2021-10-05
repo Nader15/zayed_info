@@ -43,9 +43,7 @@ flutter:
     - assets/images/
 
 
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
+  fonts:
+    - family: montserrat
+      fonts:
+        - asset: assets/font/montserrat_regular.ttf

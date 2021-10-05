@@ -3,6 +3,8 @@ import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 import 'package:zayed_info/ui/categories/categories_screen.dart';
 import 'package:zayed_info/ui/home/home_screen.dart';
 import 'package:zayed_info/ui/profile/profile_screen.dart';
+import 'package:zayed_info/ui/utils/colors.dart';
+import 'package:zayed_info/ui/utils/icon_broken.dart';
 
 class MainHome extends StatefulWidget {
   @override
@@ -10,14 +12,12 @@ class MainHome extends StatefulWidget {
 }
 
 class _MainHomeState extends State<MainHome> {
-
   var _currentIndex = 0;
 
   final items = [
     HomeScreen(),
     CategoriesScreen(),
-    Center(child: Text("Likes")),
-    ProfileScreen(),
+    Center(child: Text("Bookmarks")),
   ];
 
   @override
@@ -29,30 +29,24 @@ class _MainHomeState extends State<MainHome> {
         items: [
           /// Home
           SalomonBottomBarItem(
-            icon: Icon(Icons.home),
-            title: Text("Home"),
-            selectedColor: Colors.blueGrey,
-          ),
+              icon: Icon(Icons.home),
+              title: Text("Home"),
+              selectedColor: primaryColor,
+              unselectedColor: greyColor),
+
           /// Categories
           SalomonBottomBarItem(
-            icon: Icon(Icons.category),
-            title: Text("Categories"),
-            selectedColor: Colors.orange,
-          ),
+              icon: Icon(Icons.menu_outlined),
+              title: Text("Categories"),
+              selectedColor: primaryColor,
+              unselectedColor: greyColor),
 
           /// Likes
           SalomonBottomBarItem(
-            icon: Icon(Icons.favorite_border),
-            title: Text("Likes"),
-            selectedColor: Colors.pink,
-          ),
-
-          /// Profile
-          SalomonBottomBarItem(
-            icon: Icon(Icons.person),
-            title: Text("Profile"),
-            selectedColor: Colors.teal,
-          ),
+              icon: Icon(Icons.bookmark),
+              title: Text("Bookmarks"),
+              selectedColor: primaryColor,
+              unselectedColor: greyColor),
         ],
       ),
       body: items[_currentIndex],

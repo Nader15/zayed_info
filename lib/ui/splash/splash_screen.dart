@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:zayed_info/api/shared.dart';
 import 'package:zayed_info/ui/home/home_screen.dart';
 import 'package:zayed_info/ui/login/login_screen.dart';
+import 'package:zayed_info/ui/utils/constants.dart';
+
+import '../home/main_home.dart';
+import '../login/login_screen.dart';
+import '../utils/navigator.dart';
+import '../utils/navigator.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -12,18 +19,19 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-
-    Future.delayed(Duration(seconds: 2), () {
-      Widget widget = LoginScreen();
-
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(
-          // builder: (context) => ChatsScreen(),
-          builder: (context) => widget,
-        ),
-      );
+    getUserTocken(context).then((value) {
+      Widget widget;
+      if (bearerToken == "null") {
+        widget = LoginScreen();
+      } else {
+        widget = MainHome();
+      }
+      Future.delayed(Duration(seconds: 2), () {
+        navigateAndClearStack(context, widget);
+      });
     });
+
+
   }
 
   @override

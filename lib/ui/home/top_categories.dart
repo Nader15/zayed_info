@@ -18,15 +18,18 @@ class TopCategories extends StatelessWidget {
           return InkWell(
             onTap: () {},
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                  child: Image(
-                    image: NetworkImage(imgList[index]),
+                Expanded(
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.all(Radius.circular(5.0)),
+                    child: Image(
+                      image: NetworkImage(imgList[index])
+                    ),
                   ),
                 ),
                 SizedBox(height: 5,),
-                Text("item ${imgList.indexOf(imgList[index])}")
+                Expanded(child: Text("item ${imgList.indexOf(imgList[index])}"))
               ],
             ),
           );
